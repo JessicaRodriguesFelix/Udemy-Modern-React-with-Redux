@@ -10,7 +10,11 @@ Course: https://www.udemy.com/course/react-redux/
  4) The class attribute  is written as 'className'
  5) In-line styles are provided as objects
 
-Check console in case of warnings for attribute's names.
+*ALWAYS check the console for warnings related to attribute names.*.
+
+## MODULE Systems Overview
+
+Cheatsheet for JSX: https://jsx-notes.vercel.app/
 
 ### `npm start`
 

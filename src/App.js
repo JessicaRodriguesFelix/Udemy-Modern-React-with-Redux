@@ -1,5 +1,5 @@
 function App() {
-  return <input placeholder="hi there" spellCheck />;
+  return <h1>Hi There!</h1>;
 }
 
 export default App;
