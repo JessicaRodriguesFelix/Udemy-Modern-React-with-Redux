@@ -2,6 +2,7 @@ import ProfileCard from "./ProfileCard";
 import AlexaImage from './images/alexa.png';
 import CortanaImage from './images/cortana.png';
 import SiriImage from './images/siri.png';
+import 'bulma/css/bulma.css';
 
 function App() {
 
