@@ -1,5 +1,14 @@
+import ProfileCard from "./ProfileCard";
+
 function App() {
-  return <h1>Hi There!</h1>;
+  return (
+    <div>
+      <div>Personal Digital Assistants</div>
+      <ProfileCard />
+      <ProfileCard />
+      <ProfileCard />
+    </div>
+  );
 }
 
 export default App;
