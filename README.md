@@ -25,7 +25,7 @@ Introduction to Props System
 - Like 25 % of understanding React
 
 - Destructuring from object (examples)
-
+```javascript
 function ProfileCard({ title, handle }) {
     return (
       <div>
@@ -44,7 +44,7 @@ const {title, handle} = props
       </div>
     );
 }
-
+```
 
 ### `npm start`
 
