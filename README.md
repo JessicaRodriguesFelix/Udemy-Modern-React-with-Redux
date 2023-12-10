@@ -12,9 +12,20 @@ Course: https://www.udemy.com/course/react-redux/
 
 *ALWAYS check the console for warnings related to attribute names.*.
 
-## MODULE Systems Overview
+### MODULE Systems Overview
 
 Cheatsheet for JSX: https://jsx-notes.vercel.app/
+
+## Notes from Section 3: Building with Reusable Components
+
+Introduction to Props System
+- Pass data from a parent to a child component
+- Allows a parent to configure each child differently (show different text, styles, etc)
+- One way flow of data. Child cant push props back up
+- Like 25 % of understanding React
+
+- Destructuring from object
+
 
 ### `npm start`
 
