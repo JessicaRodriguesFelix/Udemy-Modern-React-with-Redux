@@ -24,7 +24,26 @@ Introduction to Props System
 - One way flow of data. Child cant push props back up
 - Like 25 % of understanding React
 
-- Destructuring from object
+- Destructuring from object (examples)
+
+function ProfileCard({ title, handle }) {
+    return (
+      <div>
+        <div>Title is {title}</div>
+        <div>Handle is {handle}</div>
+      </div>
+    );
+}
+
+function ProfileCard(props) {
+const {title, handle} = props
+    return (
+      <div>
+        <div>Title is {title}</div>
+        <div>Handle is {handle}</div>
+      </div>
+    );
+}
 
 
 ### `npm start`
