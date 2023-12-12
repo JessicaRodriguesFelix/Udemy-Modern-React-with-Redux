@@ -46,6 +46,11 @@ const {title, handle} = props
 }
 ```
 
+## Notes from Section 4: State: How to Change Your App
+Introducting the Event System
+- Detect a user clicking the button: Event System
+- Update content on screen: State Systems
+
 ### `npm start`
 
 Runs the app in the development mode.\
