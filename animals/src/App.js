@@ -27,7 +27,7 @@ function App() {
     <div>
       <div className="app">
         <button onClick={handleClick}>Add animal</button>
-        <button onClick={handleReset}>Reset animals</button>
+        <button onClick={handleReset} disabled={animals.length === 0}>Reset animals</button>
       </div>
       { animals.length === 0 ? (
         <div className="msg-no-animals">
