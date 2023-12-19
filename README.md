@@ -51,6 +51,27 @@ Introducting the Event System
 - Detect a user clicking the button: Event System
 - Update content on screen: State Systems
 
+Using Events
+1) Decide what kind of event you want to **watch** for. (ex: detect user clicking on something, double clicking, right clicking, dragging, typing, etc)
+2) Create a function. Usually called an **event handler or callback function.**.
+3) Name the function using pattern of handle + EventName (not required, but community convention).
+4) Pass the function as a prop to a plain element.
+5) Make sure you pass the function using a valid event name ('onClick', 'onMouseOver', etc).
+6) Make sure you pass a reference to the function, (**do not call it!!**)
+
+List of event names:
+https://legacy.reactjs.org/docs/events.html
+https://react.dev/reference/react-dom/components/common
+
+Event system (get a notification) only tells us the user did something.
+State system changes the content in the screen.
+
+Definition of State:
+- Data that changes as the user interacts with our app.
+- When this data changes, React will update content on the screen automatically.
+- This is the one-and-only way we can change what content React shows.
+Even other libs that appear to update content use the state system behind the scenes.
+
 ### `npm start`
 
 Runs the app in the development mode.\
