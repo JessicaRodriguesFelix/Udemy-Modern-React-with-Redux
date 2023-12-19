@@ -29,9 +29,15 @@ function App() {
         <button onClick={handleClick}>Add animal</button>
         <button onClick={handleReset}>Reset animals</button>
       </div>
-      <div className="app-animal">
-        <div className="animal-list">{renderedAnimals}</div>
-      </div>
+      { animals.length === 0 ? (
+        <div className="msg-no-animals">
+          <h1>No animals added yet!</h1>
+        </div>
+      ) : (
+        <div className="app-animal">
+          <div className="animal-list">{renderedAnimals}</div>
+        </div>
+      )}
     </div>
   );
 }
