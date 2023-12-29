@@ -70,7 +70,13 @@ Definition of State:
 - Data that changes as the user interacts with our app.
 - When this data changes, React will update content on the screen automatically.
 - This is the one-and-only way we can change what content React shows.
-Even other libs that appear to update content use the state system behind the scenes.
+Even other li
+
+https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/de267038-4bb5-438f-8700-7e3a39f534c1
+
+bs that appear to update content use the state system behind the scenes.
+
+
 
 ### `npm start`
 
