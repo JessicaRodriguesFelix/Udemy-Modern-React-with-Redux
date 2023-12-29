@@ -71,17 +71,17 @@ Definition of State:
 - When this data changes, React will update content on the screen automatically.
 - This is the one-and-only way we can change what content React shows.
 Even other libs that appear to update content use the state system behind the scenes.
-Major takeaways from section 4:
+
+MAJOR TAKEAWAYS FROM SECTION 4:
 - Decide what kind of event you want to watch for (search more used in the React documentation)
 - Create a function. Usually called an event handler or callback function.
 - Name the function as a prop to a plain element.
 - Make sure you pass the function using a valid event name (onClick, onMouseOver, etc)
-- Make sure you pass a reference to the function 
+- Make sure you pass a reference to the function.
+
+https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/55c761b9-cc60-425d-a00d-95a3c7562165
+
 https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/de267038-4bb5-438f-8700-7e3a39f534c1
-
-
-
-
 
 ### `npm start`
 
