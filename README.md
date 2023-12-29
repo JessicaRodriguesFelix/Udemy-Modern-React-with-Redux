@@ -81,8 +81,6 @@ MAJOR TAKEAWAYS FROM SECTION 4:
 
 https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/55c761b9-cc60-425d-a00d-95a3c7562165
 
-https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/de267038-4bb5-438f-8700-7e3a39f534c1
-
 ### `npm start`
 
 Runs the app in the development mode.\
