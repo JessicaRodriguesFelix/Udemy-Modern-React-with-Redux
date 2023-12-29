@@ -73,11 +73,11 @@ Definition of State:
 Even other libs that appear to update content use the state system behind the scenes.
 
 MAJOR TAKEAWAYS FROM SECTION 4:
-- Decide what kind of event you want to watch for (search more used in the React documentation)
-- Create a function. Usually called an event handler or callback function.
-- Name the function as a prop to a plain element.
-- Make sure you pass the function using a valid event name (onClick, onMouseOver, etc)
-- Make sure you pass a reference to the function.
+- Use the state system when you want to upate content on the screen.
+- Calling 'useState' defines a new piece of state.
+- The first argument to 'useState' is used as the initial value.
+- Updating state is done ONLY using the setter function.
+- Calling the setter function causes React to rerender the component.
 
 https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/55c761b9-cc60-425d-a00d-95a3c7562165
 
