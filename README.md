@@ -81,6 +81,8 @@ MAJOR TAKEAWAYS FROM SECTION 4:
 
 https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/55c761b9-cc60-425d-a00d-95a3c7562165
 
+## Notes from Section 5: Using an API with React
+
 ### `npm start`
 
 Runs the app in the development mode.\
