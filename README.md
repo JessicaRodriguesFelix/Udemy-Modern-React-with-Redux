@@ -83,6 +83,26 @@ https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40
 
 ## Notes from Section 5: Using an API with React
 
+- Review of HTTP requests
+- HTTP Request (Request Line, headers and body (optionally))
+- HTTP Response (Status Line, Headers, Body)
+- Some HTTP Status Codes
+  - 200 Request was successful, here's the data you were looking for
+  - 201 Record was created
+  - 204 Record was deleted
+  
+  - 301 URL you made request to has changed
+
+  - 400 Something about your request is bad (incorrect syntax or similar)
+  - 401 Unauthorized. You must provide authentication details.
+  - 403 Forbidden. You aren't allowed to access this.
+  - 404 Not Found. The thing you were looking for wasn't found.
+
+  - 500 Internal Server Error. Something on the server went wrong.
+
+- Import axios library
+  - axios object has some built-in functions for fetching data.
+
 ### `npm start`
 
 Runs the app in the development mode.\
