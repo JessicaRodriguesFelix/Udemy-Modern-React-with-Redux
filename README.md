@@ -103,6 +103,46 @@ https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40
 - Import axios library
   - axios object has some built-in functions for fetching data.
 
+- Data flow -> To share info between sibling components, we have to involve the parent component.
+- Use props to communicate from parent to child component.
+- To pass data from a child to a parent component 
+  - Communicate from Child up to parent.
+  - **Treat it like a normal event**.
+  - Pass an event handler down.
+  - Call handler when something interesting happens.
+  - Questions:
+    - Where do we do the data fetching?
+    - Where do we define state?
+    - How do we share info between components?
+  - Revist the lessomn 68 (Child to Parent communication)
+
+  In the SearchBat component:
+  ```javascript
+  function SearchBar({ onSubmit }) {
+  return (
+    <div>
+      <input />
+      <button onClick={()=> onSubmit()}>Click here</button>
+    </div>
+  );
+}
+
+OR we can:
+function SearchBar({ onSubmit }) {
+    const handleClick = () => {
+        //hard coded the term 'cars'for now
+        onSubmit('cars')
+    }
+  return (
+    <div>
+      <input />
+      <button onClick={handleClick}>Click here</button>
+    </div>
+  );
+}
+export default SearchBar;
+```
+
 ### `npm start`
 
 Runs the app in the development mode.\
