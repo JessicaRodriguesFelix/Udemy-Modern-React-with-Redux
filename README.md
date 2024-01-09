@@ -160,6 +160,14 @@ Using the value prop ensures that the value passed to onSubmit is always the lat
 
 So, it's generally recommended to use the value prop for controlled components to ensure synchronization between the input value and the component state
 
+Requirements for Keys
+
+- Use whenever we have a list of elements (so every time we do a map)
+- Add the key to the **top-most JSX element in the list**
+- Must be a string or number
+- Should be unique for this list
+- Should be consistent across rerenders
+
 ### `npm start`
 
 Runs the app in the development mode.\
