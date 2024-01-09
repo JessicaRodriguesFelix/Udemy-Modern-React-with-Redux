@@ -126,8 +126,9 @@ https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40
     </div>
   );
 }
-
+```
 OR we can:
+```javascript
 function SearchBar({ onSubmit }) {
     const handleClick = () => {
         //hard coded the term 'cars'for now
@@ -142,6 +143,7 @@ function SearchBar({ onSubmit }) {
 }
 export default SearchBar;
 ```
+
 KEEP IN MIND: The event object is ALWAYS passed automatically into every event handler that we assign to a plain HTML.
 71 - Handling Input Elements
 NEVER EVER try to get the input value by doing plain JS/HTML (ex: document.querySelector('input').value)
