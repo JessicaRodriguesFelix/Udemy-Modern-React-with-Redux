@@ -142,6 +142,21 @@ function SearchBar({ onSubmit }) {
 }
 export default SearchBar;
 ```
+KEEP IN MIND: The event object is ALWAYS passed automatically into every event handler that we assign to a plain HTML.
+71 - Handling Input Elements
+NEVER EVER try to get the input value by doing plain JS/HTML (ex: document.querySelector('input').value)
+
+Correct way in REACT:
+Step 1: Create a new piece of state (import 'useState' and give a meaningful name for this state)
+Step 2: Create an event handler to watch for the 'onChange' event
+Step 3: When the 'onChange' event fires, get the value from the input
+  - for example: event.target.value (console log the event object and expand the property target)
+Step 4: Take that value from the input and use it to update your state
+Step 5: Pass your state to the input element as the *value* prop
+  - Recommendation:
+Using the value prop ensures that the value passed to onSubmit is always the latest one, avoiding any potential delays caused by asynchronous state updates. It's a safer approach, especially in scenarios where the user might submit the form rapidly.
+
+So, it's generally recommended to use the value prop for controlled components to ensure synchronization between the input value and the component state
 
 ### `npm start`
 
