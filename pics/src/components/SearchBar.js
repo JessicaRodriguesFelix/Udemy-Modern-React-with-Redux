@@ -16,9 +16,9 @@ function SearchBar({ onSubmit }) {
   return (
     <div className="search-bar">
       <form onSubmit={handleFormSubmit}>
-        <label>Enter Search Term</label>
+        <label style={{color: 'white'}}>Enter Search Term:</label>
         <input
-          placeholder="Term"
+          placeholder="Type here"
           value={term}
           onChange={handleChange}
         />

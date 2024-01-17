@@ -1,9 +1,14 @@
 .image-list {
-    columns: 6 200px;
-    column-gap: 10 px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 img {
-    width: 100%;
-    margin-bottom: 10px;
+    width: 250px; 
+    height: 250px; 
+    flex: 0 0 10px; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
