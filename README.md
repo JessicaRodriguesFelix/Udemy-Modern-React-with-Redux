@@ -162,11 +162,14 @@ So, it's generally recommended to use the value prop for controlled components t
 
 Requirements for Keys
 
-- Use whenever we have a list of elements (so every time we do a map)
-- Add the key to the **top-most JSX element in the list**
-- Must be a string or number
-- Should be unique for this list
-- Should be consistent across rerenders
+- Use whenever we have a list of elements (so every time we do a map).
+- Add the key to the **top-most JSX element in the list**.
+- Must be a string or number.
+- Should be unique for this list.
+- Should be consistent across rerenders.
+
+https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/2d4c1177-3ab9-4e66-aed9-fae90219d5ed
+
 
 ### `npm start`
 
