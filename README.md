@@ -170,7 +170,15 @@ Requirements for Keys
 
 https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/2d4c1177-3ab9-4e66-aed9-fae90219d5ed
 
+## Notes from Section 6: How to handle forms
 
+State location:
+- Rerender the component it is defined in + all that components children
+- Find all the components that need to use this state
+- Define the state in the lowest common parent
+
+- EVENT HANDLER
+Plain functions that modified our piece of state in some way
 ### `npm start`
 
 Runs the app in the development mode.\
