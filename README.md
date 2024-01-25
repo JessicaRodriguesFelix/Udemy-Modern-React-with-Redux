@@ -195,7 +195,20 @@ const addColor = (newColor) => {
 }
 
 ```
+- Add elemtn to the middle of an array using .slice function
 
+```
+const [colors, setColors] = useState([]);
+
+const addColorAtIndex = (newColor, index) => {
+   const updatedColors = [
+//gives back everything that was included in the array colors from index 0 up to index you want to insert new element
+   ...colors.slice(0, index),
+    newColor,
+   ... colors.slice(index)
+]
+}
+```
 ### `npm start`
 
 Runs the app in the development mode.\
