@@ -16,21 +16,22 @@ function BookCreate({ onCreate }) {
     // Call the onCreate function passed as a prop with the current title
     onCreate(title);
     // Reset the title state to an empty string after submission
-    // input filed will be empty, ready for user's input
+    // input filed will be empty, ready for user's new input
     setTitle("");
   };
 
   return (
-    <div>
+    <div className="book-create">
+      <h3>Add a Book</h3>
       <form onSubmit={handleSubmit}>
-        <h1>Add a Book</h1>
         <lable>Title </lable>
         <input
+        className='input'
           value={title}
           onChange={handleChange}
           placeholder="Enter a book name"
         />
-        <button>Submit</button>
+        <button className='button'>Submit</button>
       </form>
     </div>
   );

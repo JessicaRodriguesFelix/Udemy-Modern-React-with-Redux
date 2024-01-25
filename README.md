@@ -178,7 +178,16 @@ State location:
 - Define the state in the lowest common parent
 
 - EVENT HANDLER
-Plain functions that modified our piece of state in some way
+Plain functions that modified our piece of state in some way.
+
+- DO NOT DIRECTLY MUTATE/CHANGE/MODIFY arrays or objects, when they are used/managed by the state system.
+- **REMINDER**: React treats numbers, string, booleans, undefined and null DIFFERENTLY than objects and arrays.
+- State Updates - Cheat Sheet (https://state-updates.vercel.app/)
+
+- Adding elements to the start or end
+../../../Downloads/IMG_6687.HEIC
+
+
 ### `npm start`
 
 Runs the app in the development mode.\
