@@ -184,9 +184,17 @@ Plain functions that modified our piece of state in some way.
 - **REMINDER**: React treats numbers, string, booleans, undefined and null DIFFERENTLY than objects and arrays.
 - State Updates - Cheat Sheet (https://state-updates.vercel.app/)
 
-- Adding elements to the start or end
-../../../Downloads/IMG_6687.HEIC
+  - Adding elements to the start or end
+```
+// add to start
+const [colors, setColors] = useState([]);
 
+const addColor = (newColor) => {
+  const updatedColors = [ newColor, ...colors ];
+  setColors(updatedColors);
+}
+
+```
 
 ### `npm start`
 
