@@ -266,6 +266,36 @@ const addColorAtIndex = (newColor, index) => {
 ]
 }
 ```
+- Add or change properties to an object
+```
+const [fruit, setFruit] = useState({
+  color: 'red',
+  name: 'apple'
+})
+
+const changeColor = (color) => {
+   const updatedFruit = {
+    // this line copies all properties from existing object
+      ...fruit, 
+      color: color;
+    };
+    setFruit(updatedFruit);
+}
+```
+
+Removing properties from an object
+
+const [fruit, setFruit] = useState({
+  color:'red',
+  name: 'apple
+})
+
+const removeColor = () => {
+  const {color, ...rest } = fruit;
+  setFruit(rest)
+}
+
+
 
 ### `npm start`
 
