@@ -195,6 +195,63 @@ const addColor = (newColor) => {
 }
 
 ```
+
+Variations using filter function (FKT - Filter keeps true)
+
+- First variation remove element with a particular value
+```
+  const [colors, setColors] = useState(['red','green', 'blue]);
+
+  const removeColor = (colorToRemove) => {
+    const updatedColor = colors.filter((color)=>
+       color !== colorToRemove)
+  }
+  setColors(updatedColor)
+```
+- Second variation: Remove element at an specific element
+
+```
+  const [colors, setColors] = useState([]);
+  const removeColorAtIndex = (indexToRemove) => {
+    const updatedColors = colors.filter((color, index) => {
+      return indexToRemove !== index;
+    })
+  }
+  setColors(updatedColors);
+```
+
+- Third variation: Remove element with a particular property
+
+const [books, setBooks] = useState([
+  {id: 1, title: 'harry'},
+  {id: 2, title: 'dark'}
+]);
+
+const removeBookById = (id) => {
+ const updatedBooks = books.filter((book) => {
+    return book.id !== id;
+  })
+  setBooks(updatedBooks)
+}
+
+- Modify an element based on property
+```
+const [books, setBooks] = useState([
+  {id: 1, title: 'harry'},
+  {id: 2, title: 'dark'}
+]);
+
+const updateBookId = (id, newTitle) => {
+  const update = books.map((book) => {
+    if (book.id == id) {
+      return {...book, title: newTitle};
+    }
+    return book;
+  });
+  setBooks(updateBookId);
+}
+```
+
 - Add elemtn to the middle of an array using .slice function
 
 ```
@@ -209,6 +266,7 @@ const addColorAtIndex = (newColor, index) => {
 ]
 }
 ```
+
 ### `npm start`
 
 Runs the app in the development mode.\
