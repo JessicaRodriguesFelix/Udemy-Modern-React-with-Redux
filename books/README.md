@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+## Notes from Section 6: How to handle forms
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+State location:
+- Rerender the component it is defined in + all that components children
+- Find all the components that need to use this state
+- Define the state in the lowest common parent
 
-## Available Scripts
+- EVENT HANDLER
+Plain functions that modified our piece of state in some way.
 
-In the project directory, you can run:
+- DO NOT DIRECTLY MUTATE/CHANGE/MODIFY arrays or objects, when they are used/managed by the state system.
+- **REMINDER**: React treats numbers, string, booleans, undefined and null DIFFERENTLY than objects and arrays.
+- State Updates - Cheat Sheet (https://state-updates.vercel.app/)
 
-### `npm start`
+  - Adding elements to the start or end
+```
+// add to start
+const [colors, setColors] = useState([]);
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+const addColor = (newColor) => {
+  const updatedColors = [ newColor, ...colors ];
+  setColors(updatedColors);
+}
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
 
-### `npm test`
+Variations using filter function (FKT - Filter keeps true)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- First variation remove element with a particular value
+```
+  const [colors, setColors] = useState(['red','green', 'blue]);
 
-### `npm run build`
+  const removeColor = (colorToRemove) => {
+    const updatedColor = colors.filter((color)=>
+       color !== colorToRemove)
+  }
+  setColors(updatedColor)
+```
+- Second variation: Remove element at an specific element
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+  const [colors, setColors] = useState([]);
+  const removeColorAtIndex = (indexToRemove) => {
+    const updatedColors = colors.filter((color, index) => {
+      return indexToRemove !== index;
+    })
+  }
+  setColors(updatedColors);
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Third variation: Remove element with a particular property
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+const [books, setBooks] = useState([
+  {id: 1, title: 'harry'},
+  {id: 2, title: 'dark'}
+]);
 
-### `npm run eject`
+const removeBookById = (id) => {
+ const updatedBooks = books.filter((book) => {
+    return book.id !== id;
+  })
+  setBooks(updatedBooks)
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Modify an element based on property
+```
+const [books, setBooks] = useState([
+  {id: 1, title: 'harry'},
+  {id: 2, title: 'dark'}
+]);
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+const updateBookId = (id, newTitle) => {
+  const update = books.map((book) => {
+    if (book.id == id) {
+      return {...book, title: newTitle};
+    }
+    return book;
+  });
+  setBooks(updateBookId);
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Add elemtn to the middle of an array using .slice function
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+const [colors, setColors] = useState([]);
 
-## Learn More
+const addColorAtIndex = (newColor, index) => {
+   const updatedColors = [
+//gives back everything that was included in the array colors from index 0 up to index you want to insert new element
+   ...colors.slice(0, index),
+    newColor,
+   ... colors.slice(index)
+]
+}
+```
+- Add or change properties to an object
+```
+const [fruit, setFruit] = useState({
+  color: 'red',
+  name: 'apple'
+})
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+const changeColor = (color) => {
+   const updatedFruit = {
+    // this line copies all properties from existing object
+      ...fruit, 
+      color: color;
+    };
+    setFruit(updatedFruit);
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Removing properties from an object
 
-### Code Splitting
+const [fruit, setFruit] = useState({
+  color:'red',
+  name: 'apple
+})
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+const removeColor = () => {
+  const {color, ...rest } = fruit;
+  setFruit(rest)
+}
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
