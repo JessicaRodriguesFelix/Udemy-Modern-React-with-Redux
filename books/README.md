@@ -1,5 +1,9 @@
 ## Notes from Section 6: How to handle forms
 
+
+https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/b51e67b3-7d7c-4254-84e6-38925d848fb7
+
+
 State location:
 - Rerender the component it is defined in + all that components children
 - Find all the components that need to use this state
