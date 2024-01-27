@@ -30,6 +30,7 @@ function BookCreate({ onCreate }) {
           value={title}
           onChange={handleChange}
           placeholder="Enter a book name"
+          required
         />
         <button className='button'>Submit</button>
       </form>
