@@ -1,5 +1,8 @@
-## Notes from Section 6: How to handle forms
+## Command to run PROJECT
+- npm start
+- npm run server
 
+## Notes from Section 6: How to handle forms
 
 https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/b51e67b3-7d7c-4254-84e6-38925d848fb7
 
@@ -127,3 +130,28 @@ const removeColor = () => {
   setFruit(rest)
 }
 
+Standalone API Client
+- Program used to make requests to an API server, specifically for development/test
+- There are many free API Clients
+- To make a network request we will use a third party liobrary called Axios.
+
+useEffect
+- Function that we import from React;
+- Used to run code when a component is initially rendered and (somethimes) when it is rerendered.
+
+For example:
+- First argument is a function that contains code we want to run.
+- Second is an array or nothing - this controls whether the functions is executed on rerenders.
+useEffect(() => {
+  console.log('Hi)
+}, [])
+
+Tricky things around useEffect()
+1) Understanding when our arrow function gets called;
+2) Understanding the arrow function's return value;
+3) Understanding stale variables references;
+
+**Function passed to useEffect() is ALWAYS called in the FIRST render;**
+**Function passed to useEffecr maybe called in the second, third and so on renders, it depends on the 2 argument we pass to useEffect.**
+
+![Alt text](image.png)

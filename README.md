@@ -169,3 +169,15 @@ Requirements for Keys
 - Should be consistent across rerenders.
 
 https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/2d4c1177-3ab9-4e66-aed9-fae90219d5ed
+
+App (Books)
+3 Phases:
+1) Local, non-persisted list of books
+2) List of books persisted with outside API
+  - Create the API and understand how it works (JSON Server)
+    - Install JSON-Server with NPM at the terminal
+    - Create a 'db.json' file. This is where data will be stored.
+    - Create a command to run JSON-SERVER.
+    - Run the command
+3) Outside API + centralized state.
+
