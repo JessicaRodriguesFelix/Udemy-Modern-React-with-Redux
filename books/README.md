@@ -5,6 +5,8 @@
 Example used for lesson 127: More on useEffect 
 https://codepen.io/sgrider/pen/BarEowz?editors=1111
 
+![Alt text](image-1.png)
+
 ## Notes from Section 6: How to handle forms
 
 https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/b51e67b3-7d7c-4254-84e6-38925d848fb7
@@ -172,7 +174,7 @@ USING CONTEXT
 3) 'Consume' the data in a component.
   - Import the context object
   - 'num' is the value stored in context - 5!
-  - Function for accessing value in context
+  - Function for accessing value in contextx``
 
 
 Lessons to re-watch:
