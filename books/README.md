@@ -2,6 +2,9 @@
 - npm start
 - npm run server
 
+Example used for lesson 127: More on useEffect 
+https://codepen.io/sgrider/pen/BarEowz?editors=1111
+
 ## Notes from Section 6: How to handle forms
 
 https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/b51e67b3-7d7c-4254-84e6-38925d848fb7
@@ -155,3 +158,23 @@ Tricky things around useEffect()
 **Function passed to useEffecr maybe called in the second, third and so on renders, it depends on the 2 argument we pass to useEffect.**
 
 ![Alt text](image.png)
+##############################################
+### Section 8 - Communication Using the Context System
+- Share information accross different components.
+- Context system we can share data accross components.
+- Context is *not a replacement* for Props.
+- Context is *not a replacement* for Redux.
+
+USING CONTEXT
+1) Create the context.
+2) Specify the data that will be shared.
+  - 'value' prop is super special.This is what will be shared with rest of app.
+3) 'Consume' the data in a component.
+  - Import the context object
+  - 'num' is the value stored in context - 5!
+  - Function for accessing value in context
+
+
+Lessons to re-watch:
+- 131 - Introducing context
+
