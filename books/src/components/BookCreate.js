@@ -1,6 +1,10 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import BooksContext from '../context/books';
 
-function BookCreate({ onCreate }) {
+function BookCreate() {
+
+  const { handleCreateBook } = useContext(BooksContext);
+
   const [title, setTitle] = useState("");
 
   // Function to handle changes in the input field
@@ -14,7 +18,7 @@ function BookCreate({ onCreate }) {
     // Prevent the default form submission behavior
     event.preventDefault();
     // Call the onCreate function passed as a prop with the current title
-    onCreate(title);
+    handleCreateBook(title);
     // Reset the title state to an empty string after submission
     // input filed will be empty, ready for user's new input
     setTitle("");
