@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useContext  } from "react";
 import BookCreate from "./components/BookCreate";
 import BookList from "./components/BookList";
