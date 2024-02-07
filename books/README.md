@@ -180,3 +180,20 @@ USING CONTEXT
 Lessons to re-watch:
 - 131 - Introducing context
 
+## Section 9: Deeper Dive into Hooks!
+- Understanding when our arrow function gets called.
+- Understanding the arrow functions's return value.
+  - 
+
+- Understadning stale variables references
+  - Possible bug anytime your useEffect contains a function that refers to a variable.
+  - Extremely common bug.
+  - Create-React-App includes an ESLint rule to help you find this.
+  - Following the ESLint rule can lead to more bugs**
+  - useCallback hook to help you tell React that your function is notactually changing over time.
+  - Fixes bugs around useEffect and other similar situations.
+  - Follows similar conventions as useEffect (second argument is an array).
+      - useCallback behaves very different after first render
+        - If second argument is an empty array, useCallback gives you back the original fetchBooks from first render;
+        - If second argument has elements that have changed since last render, useCallback gives you the new version of fetchBooks;
+
