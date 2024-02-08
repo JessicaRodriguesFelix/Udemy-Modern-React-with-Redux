@@ -2,3 +2,6 @@
 
 - Enforcing a very consistent set of styling rules accross our entire application.
 - It is very important for companies that the fook and feel of applications you work on is xtremely consistent.
+
+159 - props-types
+- JS library to validate the props that get passed into your component.
