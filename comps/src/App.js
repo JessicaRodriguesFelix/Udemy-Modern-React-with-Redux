@@ -3,18 +3,18 @@ function App() {
   return (
     <div>
       <div>
-        <Button success primary>
+        <Button primary>
           Child
         </Button>
       </div>
       <div>
-        <Button>See Deal</Button>
+        <Button secondary>See Deal</Button>
       </div>
       <div>
-        <Button>Buy Now</Button>
+        <Button danger>Buy Now</Button>
       </div>
       <div>
-        <Button>Hide Ads</Button>
+        <Button success>Hide Ads</Button>
       </div>
     </div>
   );
