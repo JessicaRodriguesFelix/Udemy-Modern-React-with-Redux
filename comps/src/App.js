@@ -1,20 +1,27 @@
 import Button from "./Button";
+import { GoBell, GoGift } from "react-icons/go";
+
 function App() {
   return (
     <div>
       <div>
-        <Button primary>
-          Child
-        </Button>
+        <Button primary> <GoBell/>Child</Button>
       </div>
       <div>
-        <Button secondary>See Deal</Button>
+        <Button secondary> <GoGift/> See Deal</Button>
       </div>
       <div>
         <Button danger>Buy Now</Button>
       </div>
       <div>
-        <Button success>Hide Ads</Button>
+        <Button success outline>
+          Hide Ads
+        </Button>
+      </div>
+      <div>
+        <Button rounded>
+          Hide Ads
+        </Button>
       </div>
     </div>
   );

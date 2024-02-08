@@ -9,3 +9,6 @@
 166- classnames
 - JS library for building up a className string based on different values.
 * Library is called classname but prop is className.
+
+Library to add icons: https://react-icons.github.io/react-icons/icons/go/
+lesson 170
