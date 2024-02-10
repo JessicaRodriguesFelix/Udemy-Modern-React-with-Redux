@@ -1,12 +1,13 @@
 import className from "classnames";
 import { twMerge } from "tailwind-merge";
 
-function Button({ children, primary, secondary, success, warning, danger, outline, rounded }) {
+function Button({ children, primary, secondary, success, warning, danger, outline, rounded, ...rest }) {
   // Generate a dynamic set of Tailwind CSS classes based on the provided variations.
   // Common base classes include padding and border styles. The classes for specific
   // variations (primary, secondary, success, warning, danger) are conditionally added
   const classes = twMerge(
-    className(" flex items-center px-3 py-1.5 border", {
+    //fix bug about using the className
+    className(rest.className, "flex items-center px-3 py-1.5 border", {
       "border-blue-600 bg-blue-500 text-white": primary,
       "border-gray-900 bg-gray-900 text-white": secondary,
       "border-green-500 bg-green-500 text-white": success,
@@ -22,7 +23,8 @@ function Button({ children, primary, secondary, success, warning, danger, outlin
     })
   );
 
-  return <button className={classes}>{children}</button>;
+  //rest syntax used to add aditional props, like onMouseOver, onClick, etc
+  return <button {...rest} className={classes}>{children}</button>;
 }
 
 Button.propTypes = {
