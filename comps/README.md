@@ -16,3 +16,4 @@ lesson 170
 ## Section 11
 
 - Project Organization example:
+<img width="283" alt="Screenshot 2024-02-10 at 6 21 55 PM" src="https://github.com/JessicaRodriguesFelix/udemy-modern-react-with-redux/assets/40796998/ca43d7f4-3445-4e9b-8c34-11158904518a">
