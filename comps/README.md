@@ -12,3 +12,7 @@
 
 Library to add icons: https://react-icons.github.io/react-icons/icons/go/
 lesson 170
+
+## Section 11
+
+- Project Organization example:
