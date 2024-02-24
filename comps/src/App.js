@@ -1,29 +1,22 @@
-import Button from "./components/Button";
-import { GoBell, GoGift } from "react-icons/go";
+import { useState } from "react";
+import Dropdown from "./components/Dropdown";
 
 function App() {
+
+   const [selection, setSelection] = useState(null);
+
+  const handleSelect = (option) => {
+    setSelection(option);
+  }
+
+   const options = [
+    { label: "Red", value: "red" },
+    { label: "Green", value: "green" },
+    { label: "Blue", value: "Blue" },
+  ];
+
   return (
-    <div>
-      <div>
-        <Button primary> <GoBell/>Child</Button>
-      </div>
-      <div>
-        <Button secondary> <GoGift/> See Deal</Button>
-      </div>
-      <div>
-        <Button danger>Buy Now</Button>
-      </div>
-      <div>
-        <Button success outline>
-          Hide Ads
-        </Button>
-      </div>
-      <div>
-        <Button rounded>
-          Hide Ads
-        </Button>
-      </div>
-    </div>
+    <Dropdown options={options} value={selection} onChange={handleSelect} />
   );
 }
 export default App;
