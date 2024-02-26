@@ -76,3 +76,7 @@ React does not print booleans, nulls, undefined
 JS Boolean Expressions
 - || gives back the first value that is truphy
 - && gives back the first falsy value or the last truthy value OR the last truphy value
+
+- window.history.pushstate()
+
+window emits a popstate event IF the user current url was added by pushstate()
