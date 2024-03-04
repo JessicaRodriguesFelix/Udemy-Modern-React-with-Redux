@@ -80,3 +80,14 @@ JS Boolean Expressions
 - window.history.pushstate()
 
 window emits a popstate event IF the user current url was added by pushstate()
+
+## Section 15
+
+Requirements
+Variable number of rows.
+Variable number of columns.
+# columns doesnot have to match # of properties in object.
+Some columns are sortable.
+Sortable columns can sort different kinds of values.
+Cells can be calculated using multiple properties.
+Cells can display arbitrary data.
