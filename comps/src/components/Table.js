@@ -1,5 +1,12 @@
+import { Fragment } from 'react';
+
 function Table({ data, config, keyFn }) {
   const renderedHeaders = config.map((columnConfig) => {
+    if (columnConfig.header) {
+        return (
+          <Fragment key={columnConfig.label}>{columnConfig.header()}</Fragment>
+        );
+    }
     return <th key={columnConfig.label}>{columnConfig.label}</th>;
   });
 

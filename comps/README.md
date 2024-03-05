@@ -91,3 +91,6 @@ Some columns are sortable.
 Sortable columns can sort different kinds of values.
 Cells can be calculated using multiple properties.
 Cells can display arbitrary data.
+
+## Section 16 Data sorting
+.localeCompare() built in function to compare strings in js
