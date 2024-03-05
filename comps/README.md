@@ -94,3 +94,5 @@ Cells can display arbitrary data.
 
 ## Section 16 Data sorting
 .localeCompare() built in function to compare strings in js
+NEVER directly modify an array inside react if that array is part of the prop system 
+make a copy of the prop array to modiy
